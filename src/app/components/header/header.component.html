@@ -1,10 +1,18 @@
 <header class="header">
-<nav class="container navbar d-flex justify-content-around">
-  <a class="navbar-brand" href="#">
-    <img src="./src/app/img/yourbank.png" title="YourBank" class="d-inline-block align-top" alt="logo YourBank">
-  </a>
-<h4 class="text-green" href="#">Olá, <span class="text-dark" >Ana Lima da Silva</span></h4>
-  <h3  class="text-green" href="#">Ag <span class="text-black-50"> 1234 </span> c/c <span class="text-black-50">12345-6</span></h3>
-  <span [routerLink]="['/']" class="text-danger" href="#">SAIR <i class="icon-locker-streamline-unlock text-secondary"> </i></span>
-</nav>
+  <nav class="container navbar d-flex justify-content-around">
+    <div class="col-sm-3">
+      <a class="navbar-brand" href="#">
+        <img [src]="fotoCaminho" title="YourBank" class="d-inline-block align-top img-logo" alt="logo YourBank">
+        </a>
+    </div>
+    <div  class="col-sm-4">
+      <h4 class="green-text" href="#">Olá, <span class="black-text" >Ana Lima da Silva</span></h4>
+    </div>
+    <div  class="col-sm-3">
+      <h3  class="green-text" href="#">Ag <span class="gray-text"> 1234 </span> c/c <span class="gray-text">12345-6</span></h3>
+    </div>
+    <div  class="col-sm-2">
+      <span [routerLink]="['/']" class="red-text" href="#">SAIR <i class="fas fa-unlock gray-text"></i></span>
+    </div>
+  </nav>
 </header>
