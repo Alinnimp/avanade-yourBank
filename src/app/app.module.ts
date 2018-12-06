@@ -29,7 +29,8 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
   imports: [
     BrowserModule,
     RouterModule.forRoot ([
-      {path: 'homePage',  component: HomePageComponent }
+      {path: 'homePage',  component: HomePageComponent },
+      {path: 'transferencia',  component: TransferenciaPageComponent }
     ])
   ],
   providers: [],
