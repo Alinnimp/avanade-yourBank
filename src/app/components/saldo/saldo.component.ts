@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SaldoComponent implements OnInit {
 
   showExtrato: boolean = false
+  showSaldo: boolean = false
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class SaldoComponent implements OnInit {
 
   contentExtrato () {
     this.showExtrato = !this.showExtrato
+  }
+
+  mostrarSaldo(){
+    this.showSaldo = !this.showSaldo;
   }
 
 }

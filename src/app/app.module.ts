@@ -9,6 +9,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { TransfComponent } from './components/transf/transf.component';
 import { SaldoComponent } from './components/saldo/saldo.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
+import { ExibirSaldoComponent } from './components/exibir-saldo/exibir-saldo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExtratoComponent } from './components/extrato/extrato.component';
     HomePageComponent,
     TransfComponent,
     SaldoComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    ExibirSaldoComponent
   ],
   imports: [
     BrowserModule,

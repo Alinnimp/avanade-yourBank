@@ -1,0 +1,19 @@
+.text-green {
+    color: #33D57C;
+}
+
+.text-danger{
+   cursor: pointer;
+   text-decoration: none;
+   font-size: 16px;
+
+}
+nav{
+    font-family: Segoe UI Regular;
+}
+h4 {
+    font-size: 29px;
+}
+h3 {
+    font-size: 23px;
+}
