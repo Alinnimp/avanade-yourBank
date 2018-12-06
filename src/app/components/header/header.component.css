@@ -1,3 +1,11 @@
+.header{
+    background-color: #FFF;
+    padding: 20px 0;
+    box-shadow: rgba(214, 214, 214, 0.33) 0 3px 6px;
+}
+.navbar  {
+    padding: 0;
+}
 .text-green {
     color: #33D57C;
 }
@@ -6,10 +14,6 @@
    cursor: pointer;
    text-decoration: none;
    font-size: 16px;
-
-}
-nav{
-    font-family: Segoe UI Regular;
 }
 h4 {
     font-size: 29px;
