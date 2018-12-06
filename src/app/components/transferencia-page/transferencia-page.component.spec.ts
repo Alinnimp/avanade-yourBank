@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransfComponent } from './transf.component';
+import { TransferenciaPageComponent } from './transferencia-page.component';
 
-describe('TransfComponent', () => {
-  let component: TransfComponent;
-  let fixture: ComponentFixture<TransfComponent>;
+describe('TransferenciaPageComponent', () => {
+  let component: TransferenciaPageComponent;
+  let fixture: ComponentFixture<TransferenciaPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransfComponent ]
+      declarations: [ TransferenciaPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TransfComponent);
+    fixture = TestBed.createComponent(TransferenciaPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
