@@ -10,5 +10,15 @@
   box-shadow: 1px 1px 10px 1px #f5f5f5;
   border-radius: 4px;
   padding: 40px 40px;
-  min-height: 248px;
+  min-height: 215px;
 }
+
+.text-link {
+  color: #908E8E;
+}
+
+.text-link:hover {
+  color: #656565;
+  text-decoration: none;
+}
+

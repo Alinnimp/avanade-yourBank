@@ -1,3 +1,13 @@
-.fas .fa-circle {
-    font-size: 8px;
+.box-card i.fas.fa-circle {
+    font-size: 7px;
+    color: #2FAA34;
+    margin-right: 5px;
+}
+
+.text-size {
+    font-size: 24px;
+  }
+
+.text-tranfs {
+    font-size: 20px;
 }
