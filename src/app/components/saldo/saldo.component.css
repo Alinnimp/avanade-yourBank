@@ -1,5 +1,6 @@
 h1{
     font-size: 47px;
+    font-weight: 400;
 }
 
 .extrato-btn {
@@ -13,7 +14,12 @@ h1{
     padding: 10px 30px;
 }
 
+.container-saldo {
+    height: 30px;
+}
 .ver-saldo{
     cursor: pointer;
     font-size: 14px;
+    color: #AAAAAA;
+    font-weight: 300;
 }

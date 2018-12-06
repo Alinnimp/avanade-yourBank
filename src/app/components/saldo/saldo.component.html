@@ -4,10 +4,12 @@
             <div class="d-flex justify-content-between mb-3">
                 <h1 class="card-title">Saldo</h1>
                 <div>
-                <div *ngIf="showSaldo">
-                    <app-exibir-saldo></app-exibir-saldo>
-                </div>
-                    <p class="card-text text-black-50 ver-saldo pt-4 p-2" (click)='mostrarSaldo()'>{{ showSaldo ? "Ocutar saldo" : "Ver saldo"}}</p>
+                    <div class="container-saldo">
+                        <div *ngIf="showSaldo">
+                            <app-exibir-saldo></app-exibir-saldo>
+                        </div>
+                    </div>
+                    <p class="card-text ver-saldo" (click)='mostrarSaldo()'>{{ showSaldo ? "Ocutar saldo" : "Ver saldo"}}</p>
                 </div>
             </div>
             <button type="button" class="extrato-btn align-self-center" (click)='contentExtrato()'>VER EXTRATO</button>

@@ -1,0 +1,14 @@
+.container-frase{
+  padding-top: 60px;
+  text-align: center;
+}
+
+.frase {
+  color: #AAAAAA;
+  font-weight: 300;
+}
+
+.container-frase i.far.fa-smile-wink {
+  color: #48B44D;
+  margin-left: 10px;
+}
