@@ -22,6 +22,12 @@
   border-radius: 0;
 }
 
+.form-transferencia .valor{
+  text-align:right; 
+  font-size: 30px;
+  color: #AAAAAA;
+}
+
 .color-input::-webkit-input-placeholder { 
   color:#424248;
 }

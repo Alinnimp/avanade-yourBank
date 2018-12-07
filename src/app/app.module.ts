@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule} from '@angular/router'
+import { RouterModule} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { CurrencyMaskModule } from "ng2-currency-mask";
+import {NgxMaskModule} from 'ngx-mask'
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -28,6 +32,9 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    CurrencyMaskModule,
+    NgxMaskModule.forRoot(),
     RouterModule.forRoot ([
       {path: 'homePage',  component: HomePageComponent },
       {path: 'transferencia',  component: TransferenciaPageComponent }

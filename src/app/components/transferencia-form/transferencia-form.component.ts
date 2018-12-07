@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-transferencia-form',
   templateUrl: './transferencia-form.component.html',
