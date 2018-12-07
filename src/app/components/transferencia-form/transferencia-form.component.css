@@ -82,3 +82,9 @@
   min-width: 100%;
   margin-top: 20px;
 }
+
+@media (max-width: 424px)  { 
+  .acesso-rapido .valores {
+    padding: 0 8px;
+  }
+}

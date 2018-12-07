@@ -22,3 +22,8 @@
   text-decoration: none;
 }
 
+@media (max-width: 768px)  { 
+  .box-card {
+    margin-bottom: 20px;
+  }
+}
