@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { CurrencyMaskModule } from "ng2-currency-mask";
-import {NgxMaskModule} from 'ngx-mask'
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -32,6 +33,7 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     CurrencyMaskModule,
     NgxMaskModule.forRoot(),
