@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
-    this.clienteService.getCliente(22222222222) //aqui estou passando um cpf de cliente
+    this.clienteService.getCliente(67593591000) //aqui estou passando um cpf de cliente
     .then(dados => {
       this.cliente = dados;
     })

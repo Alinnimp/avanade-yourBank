@@ -18,6 +18,7 @@ import { TransferenciaPageComponent } from './components/transferencia-page/tran
 import { HomeTransferenciaComponent } from './components/home-transferencia/home-transferencia.component';
 import { TransferenciaFormComponent } from './components/transferencia-form/transferencia-form.component';
 import { TransferenciaConfirmComponent } from './components/transferencia-confirm/transferencia-confirm.component';
+import { TipoTransfPipe } from './pipes/tipo-transf.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TransferenciaConfirmComponent } from './components/transferencia-confir
     TransferenciaPageComponent,
     HomeTransferenciaComponent,
     TransferenciaFormComponent,
-    TransferenciaConfirmComponent
+    TransferenciaConfirmComponent,
+    TipoTransfPipe
   ],
   imports: [
     BrowserModule,
