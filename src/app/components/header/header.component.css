@@ -9,11 +9,11 @@
 }
 
 h4 {
-    font-size: 29px;
+    font-size: 25px;
     font-weight: 400;
 }
 h3 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -32,4 +32,8 @@ h3 {
 
 .green-text{
     color: #2FAA33;
+}
+
+.img-logo{
+    width: 200px;
 }

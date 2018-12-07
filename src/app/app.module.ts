@@ -17,6 +17,7 @@ import { ExibirSaldoComponent } from './components/exibir-saldo/exibir-saldo.com
 import { TransferenciaPageComponent } from './components/transferencia-page/transferencia-page.component';
 import { HomeTransferenciaComponent } from './components/home-transferencia/home-transferencia.component';
 import { TransferenciaFormComponent } from './components/transferencia-form/transferencia-form.component';
+import { TransferenciaConfirmComponent } from './components/transferencia-confirm/transferencia-confirm.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
     ExibirSaldoComponent,
     TransferenciaPageComponent,
     HomeTransferenciaComponent,
-    TransferenciaFormComponent
+    TransferenciaFormComponent,
+    TransferenciaConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
     NgxMaskModule.forRoot(),
     RouterModule.forRoot ([
       {path: 'homePage',  component: HomePageComponent },
-      {path: 'transferencia',  component: TransferenciaPageComponent }
+      {path: 'transferencia',  component: TransferenciaPageComponent },
+      {path: 'confirmar-transferencia',  component: TransferenciaConfirmComponent }
     ])
   ],
   providers: [],

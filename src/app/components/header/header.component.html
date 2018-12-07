@@ -1,9 +1,9 @@
 <header class="header">
-  <nav class="container navbar d-flex justify-content-around">
-    <div class="col-sm-3">
-      <a class="navbar-brand" href="#">
+  <nav class="container navbar d-flex justify-content-between">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <a [routerLink]="['/homePage']" class="navbar-brand" >
         <img [src]="fotoCaminho" title="YourBank" class="d-inline-block align-top img-logo" alt="logo YourBank">
-        </a>
+      </a>
     </div>
     <div  class="col-sm-4">
       <h4 class="green-text" href="#">Olá, <span class="black-text" >{{ cliente.nome }}</span></h4>
@@ -11,9 +11,8 @@
     <div  class="col-sm-3">
       <h3  class="green-text" href="#">Ag <span class="gray-text"> {{ cliente.agencia }} </span> c/c <span class="gray-text">{{ cliente.conta }}</span></h3>
     </div>
-    <div  class="col-sm-2">
+    <div  class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
       <a [routerLink]="['/']" class="red-text">SAIR<i class="fas fa-unlock gray-text pl-1"></i></a>
     </div>
   </nav>
 </header>
-
