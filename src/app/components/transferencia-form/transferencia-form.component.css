@@ -72,6 +72,34 @@
   border-right: none;
 }
 
+#formConfirm {
+  max-width: 300px;
+  margin: 0 auto 4px;
+}
+
+#formConfirm .item{
+  color: #424248;
+  font-size: 16px;
+  margin-right: 5px;
+}
+#formConfirm .valor {
+  color: #AAAAAA;
+  font-weight: 300;
+}
+
+.container-msg-transferencia{
+  font-size: 20px;
+  color: #424248;
+}
+
+i.far.fa-thumbs-up   {
+  color: #2FAA33;
+}
+
+i.far.fa-meh{
+  color: red;
+}
+
 @media (max-width: 424px)  { 
   .acesso-rapido .valores {
     padding: 0 8px;

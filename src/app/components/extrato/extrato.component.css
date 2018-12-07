@@ -26,8 +26,12 @@ h1 {
     font-weight: 400;
 }
 
-.fas.fa-arrow-circle-right, .fas.fa-arrow-circle-left {
+.fas.fa-arrow-circle-right {
     color:#2FAA33;
+    font-size: 13px;
+}
+.fas.fa-arrow-circle-left {
+    color: #FF0000;
     font-size: 13px;
 }
 

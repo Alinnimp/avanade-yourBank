@@ -6,10 +6,12 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import {NgxMaskModule} from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr' ;
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,10 +20,12 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { SaldoComponent } from './components/saldo/saldo.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
 import { ExibirSaldoComponent } from './components/exibir-saldo/exibir-saldo.component';
-import { TransferenciaPageComponent } from './components/transferencia-page/transferencia-page.component';
 import { HomeTransferenciaComponent } from './components/home-transferencia/home-transferencia.component';
+import { TransferenciaPageComponent } from './components/transferencia-page/transferencia-page.component';
 import { TransferenciaFormComponent } from './components/transferencia-form/transferencia-form.component';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { TipoTransfPipe } from './pipes/tipo-transf.pipe';
+
 
 
 @NgModule({
@@ -33,12 +37,14 @@ import { AuthGuardService } from './guards/auth-guard.service';
     SaldoComponent,
     ExtratoComponent,
     ExibirSaldoComponent,
-    TransferenciaPageComponent,
     HomeTransferenciaComponent,
+    TransferenciaPageComponent,
     TransferenciaFormComponent,
+    TipoTransfPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     CurrencyMaskModule,
@@ -51,6 +57,7 @@ import { AuthGuardService } from './guards/auth-guard.service';
       {path: 'homePage', canActivate: [AuthGuardService], component: HomePageComponent },
       {path: 'transferencia', canActivate: [AuthGuardService],  component: TransferenciaPageComponent },
       {path: '', redirectTo: 'login', pathMatch: 'full' }
+
     ])
   ],
   providers: [AuthGuardService],
