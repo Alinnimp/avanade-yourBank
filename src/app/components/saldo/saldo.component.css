@@ -23,3 +23,9 @@ h1{
     color: #AAAAAA;
     font-weight: 300;
 }
+
+@media (max-width: 1025px)  {
+    h1{
+        font-size: 35px;
+    }
+}
