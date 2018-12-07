@@ -2,6 +2,7 @@
   background-color:#F7F7F9;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  padding-bottom: 40px;
 }
 
 .box-card{
@@ -22,5 +23,50 @@
   text-decoration: none;
 }
 
+.sub-title {
+  font-size: 24px;
+  text-align: left;
+  color: #424248;
+}
 
+.btn-green {
+  background: rgb(47,170,51);
+  background: linear-gradient(0deg, rgba(47,170,51,1) 0%, rgba(51,213,124,1) 100%);
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;  
+  min-width: 100%;
+  margin-top: 20px;
+}
+
+.btn-green:disabled,
+.btn-green[disabled]{
+  background:#96DC98;
+  background: linear-gradient(0deg, rgb(132, 207, 166) 0%, rgb(132, 207, 166) 100%);
+  cursor: not-allowed;
+  color: #fff;
+}
+
+.btn-grey {
+  background: #D0D0D0;
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;  
+  min-width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px)  { 
+  .box-card {
+    margin-bottom: 20px;
+  }
+}
 

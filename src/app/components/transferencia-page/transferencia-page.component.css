@@ -1,0 +1,29 @@
+.container-link-home {
+    text-align: left;
+    margin-bottom: 20px;
+ }
+ 
+ .container-link-home .link-home{
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: 300;
+ }
+ 
+ .container-link-home .link-home:hover {
+    text-decoration: none;
+    color: #656565;
+ }
+ 
+ .container-link-home i.fas.fa-angle-left{
+    margin-right: 5px;
+    color: #2FAA33;
+ }
+
+ .saldo-mobile-text {
+   font-weight: 300;
+   font-size: 14px;
+   color: #AAAAAA;
+   margin-right: 5px;
+   text-align: right;
+   margin-bottom: 0;
+ }

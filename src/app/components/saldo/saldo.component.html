@@ -1,24 +1,19 @@
 
-    <div class="box-card mt-5">
-        <div class="d-flex flex-column">
-            <div class="d-flex justify-content-between mb-3">
-                <h1 class="card-title">Saldo</h1>
-                <div>
-                    <div class="container-saldo">
-                        <div *ngIf="showSaldo">
-                            <app-exibir-saldo></app-exibir-saldo>
-                        </div>
+<div class="box-card">
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-between mb-3">
+            <h1 class="card-title">Saldo</h1>
+            <div>
+                <div class="container-saldo">
+                    <div *ngIf="showSaldo">
+                        <app-exibir-saldo></app-exibir-saldo>
                     </div>
-                    <p class="card-text ver-saldo" (click)='mostrarSaldo()'>{{ showSaldo ? "Ocutar saldo" : "Ver saldo"}}</p>
                 </div>
-            </div>
-            <button type="button" class="extrato-btn align-self-center" (click)='contentExtrato()'>VER EXTRATO</button>
-            <div *ngIf="showExtrato">
-            <app-extrato></app-extrato>
+                <p class="card-text ver-saldo" (click)='mostrarSaldo()'>{{ showSaldo ? "Ocutar saldo" : "Ver saldo"}}</p>
             </div>
         </div>
+        <button type="button" class="extrato-btn align-self-center" (click)='contentExtrato()'>VER EXTRATO</button>
+        <div *ngIf="showExtrato">
+        <app-extrato></app-extrato>
+        </div>
     </div>
-
-
-
-<!-- <button type='text' >Ver Extrato</button> -->

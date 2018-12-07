@@ -1,0 +1,36 @@
+.box-extrato{
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 300;
+    color:#424248;
+}
+
+.text-data, .text-fluxo{
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #AAAAAA;
+    font-weight: 300;
+}
+
+.text-title {
+    color: #424248;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.text-valor {
+    color: #424248;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.fas.fa-arrow-circle-right, .fas.fa-arrow-circle-left {
+    color:#2FAA33;
+    font-size: 13px;
+}
+
+.borda {
+    border-bottom: 1px solid #f2f2f2;
+}

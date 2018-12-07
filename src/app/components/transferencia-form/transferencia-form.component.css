@@ -1,0 +1,79 @@
+
+.form-transferencia{
+  text-align: left;
+  max-width: 350px;
+  margin: 40px auto 0;
+}
+
+.form-transferencia .cifrao {
+  margin-left: 10px;
+  color: #424248;
+}
+
+.form-control {
+  border-bottom: 1px solid #C2C2C2;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.form-transferencia .valor{
+  text-align:right; 
+  font-size: 30px;
+  color: #AAAAAA;
+}
+
+.color-input::-webkit-input-placeholder { 
+  color:#424248;
+}
+
+.color-input input:-moz-placeholder { 
+  color: #424248;
+}
+
+.valor::-webkit-input-placeholder { 
+  text-align:right; 
+  font-size: 30px;
+  color: #AAAAAA;
+}
+
+.valor input:-moz-placeholder { 
+  text-align:right; 
+  font-size: 30px;
+  color: #AAAAAA;
+}
+
+.acesso-rapido {
+  margin-top: 15px;
+}
+
+.acesso-rapido .valores{
+  background: #F7F7F9;
+  border-radius: 4px;
+  border: 1px solid #C2C2C2;
+  padding: 0px 20px;
+}
+
+.acesso-rapido .valores a {
+  color: #AAAAAA;
+  font-size: 12px;
+  text-align: center;
+}
+
+.acesso-rapido .valores a:hover {
+  text-decoration: none;
+}
+
+.ng-invalid.ng-touched:not(form){
+  border-bottom: 1px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+@media (max-width: 424px)  { 
+  .acesso-rapido .valores {
+    padding: 0 8px;
+  }
+}
