@@ -1,8 +1,4 @@
-.sub-title {
-  font-size: 24px;
-  text-align: left;
-  color: #424248;
-}
+
 .form-transferencia{
   text-align: left;
   max-width: 350px;
@@ -14,7 +10,7 @@
   color: #424248;
 }
 
-.form-transferencia .form-control {
+.form-control {
   border-bottom: 1px solid #C2C2C2;
   border-top: none;
   border-left: none;
@@ -69,18 +65,11 @@
   text-decoration: none;
 }
 
-.btn-continuar {
-  background: rgb(47,170,51);
-  background: linear-gradient(0deg, rgba(47,170,51,1) 0%, rgba(51,213,124,1) 100%);
-  border-radius: 4px;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;  
-  min-width: 100%;
-  margin-top: 20px;
+.ng-invalid.ng-touched:not(form){
+  border-bottom: 1px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 @media (max-width: 424px)  { 
