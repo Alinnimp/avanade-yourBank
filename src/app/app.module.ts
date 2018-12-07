@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { CurrencyMaskModule } from "ng2-currency-mask";
-import {NgxMaskModule} from 'ngx-mask'
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -16,6 +17,8 @@ import { ExibirSaldoComponent } from './components/exibir-saldo/exibir-saldo.com
 import { HomeTransferenciaComponent } from './components/home-transferencia/home-transferencia.component';
 import { TransferenciaPageComponent } from './components/transferencia-page/transferencia-page.component';
 import { TransferenciaFormComponent } from './components/transferencia-form/transferencia-form.component';
+import { TipoTransfPipe } from './pipes/tipo-transf.pipe';
+
 
 @NgModule({
   declarations: [
@@ -29,9 +32,11 @@ import { TransferenciaFormComponent } from './components/transferencia-form/tran
     HomeTransferenciaComponent,
     TransferenciaPageComponent,
     TransferenciaFormComponent,
+    TipoTransfPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     CurrencyMaskModule,
     NgxMaskModule.forRoot(),
