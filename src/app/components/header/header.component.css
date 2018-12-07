@@ -2,20 +2,12 @@
     background-color: #FFF;
     padding: 20px 0;
     box-shadow: rgba(214, 214, 214, 0.33) 0 3px 6px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 .navbar  {
     padding: 0;
 }
-.text-green {
-    color: #33D57C;
-}
 
-.text-danger{
-   cursor: pointer;
-   text-decoration: none;
-   font-size: 16px;
-}
 h4 {
     font-size: 29px;
     font-weight: 400;
@@ -35,12 +27,9 @@ h3 {
 
 .red-text {
     color: #F22613;
+    cursor: pointer;
 }
 
 .green-text{
     color: #2FAA33;
-}
-
-.img-logo {
-    width: 200px;
 }

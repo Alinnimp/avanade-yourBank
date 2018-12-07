@@ -1,0 +1,20 @@
+.container-link-home {
+    text-align: left;
+    margin-bottom: 20px;
+ }
+ 
+ .container-link-home .link-home{
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: 300;
+ }
+ 
+ .container-link-home .link-home:hover {
+    text-decoration: none;
+    color: #656565;
+ }
+ 
+ .container-link-home i.fas.fa-angle-left{
+    margin-right: 5px;
+    color: #2FAA33;
+ }
