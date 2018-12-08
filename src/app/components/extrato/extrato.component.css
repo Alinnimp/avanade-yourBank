@@ -38,3 +38,7 @@ h1 {
 .borda {
     border-bottom: 1px solid #f2f2f2;
 }
+
+.box-extrato{
+    max-height: 300px;
+}
