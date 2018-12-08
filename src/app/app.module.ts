@@ -41,8 +41,10 @@ import { TipoTransfPipe } from './pipes/tipo-transf.pipe';
     CurrencyMaskModule,
     NgxMaskModule.forRoot(),
     RouterModule.forRoot ([
-      {path: 'homePage',  component: HomePageComponent },
-      {path: 'transferencia',  component: TransferenciaPageComponent },
+      { path: 'homePage',  component: HomePageComponent },
+      { path: 'transferencia',  component: TransferenciaPageComponent },
+      { path: '', redirectTo: 'homePage', pathMatch: 'full' },
+      { path: '**', redirectTo: 'homePage', pathMatch: 'full' }
     ])
   ],
   providers: [],
