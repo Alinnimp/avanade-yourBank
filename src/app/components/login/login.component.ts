@@ -78,5 +78,9 @@ export class LoginComponent implements OnInit {
     } else {
 
     }
+    
+  }
+  onAcesso() {
+    this.router.navigate(['/homePage'])
   }
 }
