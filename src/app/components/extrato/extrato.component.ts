@@ -19,7 +19,6 @@ export class ExtratoComponent implements OnInit {
       for(let i = 0; i < dados.transferencia.length; i++){
         this.transferencias.push(dados.transferencia[i]);
       }
-      console.log(this.transferencias);
     })
     .catch(erro => {
       console.log(erro)

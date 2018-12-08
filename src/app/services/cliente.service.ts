@@ -12,7 +12,10 @@ export class ClienteService {
     getCliente(cpf: Number) {
       return this.http.get<Cliente>(this.url + `cliente/${cpf}`).toPromise();
     }
-    getExtrato(cpf: Number) {
-      return this.http.get<Cliente>(this.url + `extrato/${cpf}`).toPromise();
+    getTransf(agencia: Number, conta: Number) {
+      return this.http.get<Cliente>(this.url + `cliente/${agencia}/${conta}`).toPromise();
+    }
+    postTransf(cliente: Cliente){
+      return this.http.put(this.url + `cliente/${cliente.cpf}`, cliente).toPromise();
     }
 }
