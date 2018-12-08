@@ -2,7 +2,6 @@
   background-color:#F7F7F9;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  padding-bottom: 40px;
 }
 
 .box-card{
@@ -12,6 +11,7 @@
   border-radius: 4px;
   padding: 40px 40px;
   min-height: 215px;
+  margin-bottom: 40px;
 }
 
 .text-link {
