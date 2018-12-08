@@ -37,3 +37,7 @@ h3 {
 .img-logo{
     width: 200px;
 }
+
+.borda {
+    border: 1px solid red;
+}
