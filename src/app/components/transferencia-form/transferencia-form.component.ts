@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { Cliente } from 'src/app/models/cliente';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transferencia-form',
@@ -43,6 +42,7 @@ export class TransferenciaFormComponent implements OnInit {
   onConfirmar() {
     this.confirmarTransferencia = !this.confirmarTransferencia
     this.resultTransferencia = !this.resultTransferencia
+    
     this.cliente.saldo = this.cliente.saldo + this.valor;
     this.cliente.transferencia.push({
       agencia: this.cliente.agencia,
