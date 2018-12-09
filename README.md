@@ -1,27 +1,37 @@
-# AvanadeYourBank
+# Internet Banking - YourBank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+Protótipo: https://xd.adobe.com/view/31020f8f-9b84-4863-454e-ab43a6d976a0-4733/?fullscreen
 
-## Development server
+### Configuração do Ambiente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Tecnologias Usadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- HTML
+- CSS
+- JavaScript
+- Angular
+- typeScript
+- Bootstrap
+- NodeJS
+- MongoDB
 
-## Running unit tests
+### Equipe e funções
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Front-End
 
-## Running end-to-end tests
+- Alinni Pessoa (Líder): estrutura do ambiente, criação da tela login e do component de transferencia da home.
+- Alyne Martins: estrutura do ambiente, criação dos components header, saldo e extrato.
+- Juliana Reis: Layout, estrutura do ambiente, criação dos components de transferência, confirmação da transferência e mensagem.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Back-end
 
-## Further help
+- Juliana Augusta: criação de banco de dados e popular banco de dados.
+- José Henrique: criação de banco de dados, api de extrato/transação e Requisição de api no angular.
+- Rosines Almeida: criação de banco de dados e api de autentitificação.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### imagens do YourBank
+
+(Aguardando a finalização do projeto)
