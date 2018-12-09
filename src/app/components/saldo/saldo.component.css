@@ -1,0 +1,31 @@
+h1{
+    font-size: 47px;
+    font-weight: 400;
+}
+
+.extrato-btn {
+    background: rgb(47,170,51);
+    background: linear-gradient(0deg, rgba(47,170,51,1) 0%, rgba(51,213,124,1) 100%);
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.container-saldo {
+    height: 30px;
+}
+.ver-saldo{
+    cursor: pointer;
+    font-size: 14px;
+    color: #AAAAAA;
+    font-weight: 300;
+}
+
+@media (max-width: 1025px)  {
+    h1{
+        font-size: 35px;
+    }
+}

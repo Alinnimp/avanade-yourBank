@@ -1,0 +1,86 @@
+<div class="box-card">
+
+  <!-- Formulário de transferencia -->
+  <div id="formTransferencia" *ngIf="formularioTransferencia">
+      <p class="sub-title">Transferência para conta YourBank</p>
+      <form (ngSubmit)="onSubmit(formT)" #formT="ngForm" class="form-transferencia">
+        <div class="row">
+          <div class="form-group col-12 col-sm-12 col-md-12">
+            <input minlength="4" mask="0000" type="text" class="form-control color-input" id="inputAgencia" placeholder="Agência" name="agencia" [(ngModel)]="agencia">
+            <!-- <div *ngIf="!agencia.valid && agencia.touched" class="alert alert-danger" role="alert">
+              Por favor, verifique o número da agência
+            </div> -->
+          </div>
+          <div class="form-group col-12 col-sm-12 col-md-12">
+              <input minlength="6" mask="00000-0" type="text" class="form-control color-input" id="inputConta" placeholder="Conta" name="conta" [(ngModel)]="conta">
+              <!-- <div *ngIf="!conta.valid && conta.touched" class="alert alert-danger" role="alert">
+                  Por favor, verifique o número da conta
+              </div> -->
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-12 col-12 col-sm-12 col-md-12">
+                <label class="cifrao">R$</label>
+                <input type="text" class="form-control valor" id="inputValor" placeholder="0,00" currencyMask [(ngModel)]="valorInput" required name="valorInput" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"/>
+                <!-- <div *ngIf="!reais.valid && reais.touched" class="alert alert-danger" role="alert">
+                    Por favor, informe um valor
+                </div>  -->
+            </div>
+        </div>
+        <!-- <div class="row">
+          <div class="form-group col-12 col-12 col-sm-12 col-md-12">
+              <select class="form-control" id="selectTipo" name="tipo" [ngModel]="tipo" required #docted="ngModel">
+                  <option [ngValue]="null">DOC ou TED</option>
+                  <option *ngFor="let tipo of tipos" [ngValue]="tipo" >
+                    {{ tipo.name }}
+                  </option>
+                </select>
+                <div *ngIf="!docted.valid && docted.touched" class="alert alert-danger" role="alert">
+                    Por favor, selecionar o tipo da transação
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="row">
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="acesso-rapido d-flex flex-row justify-content-between">
+              <div class="valores"><a href="">5,00</a></div>
+              <div class="valores"><a href="">10,00</a></div>
+              <div class="valores"><a href="">20,00</a></div>
+              <div class="valores"><a href="">50,00</a></div>
+            </div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="col-12 col-12 col-sm-12 col-md-12">
+            <button type="submit" class="btn-green" [disabled]="!formT.valid">Continuar</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  
+  <!-- Confirmar transferencia -->
+  <div class="text-left" *ngIf="confirmarTransferencia">
+      <p class="sub-title">Confirme os dados da transferência</p>
+      <form id="formConfirm">
+        <p><span class="item">Nome:</span><span class="valor">{{ cliente.nome }}</span></p>
+        <p><span class="item">CPF:</span><span class="valor">{{ cliente.cpf }}</span></p>
+        <p><span class="item">Agência:</span><span class="valor">{{ cliente.agencia }}</span></p>
+        <p><span class="item">Conta:</span><span class="valor">{{ cliente.conta }}</span></p>
+        <p><span class="item">Valor:</span><span class="valor">{{ valor | currency:'BRL':true:'1.2-2' }}</span></p>
+        <!-- <p><span class="item">Tipo:</span><span class="valor">DOC</span></p> -->
+        <p><span class="item">Data:</span><span class="valor">{{ dataTransferencia | date:'dd-MM-yyyy' }}</span></p>
+        <button type="submit" class="btn-green"  (click)="onConfirmar()">Confirmar</button>
+        <button type="submit" class="btn-grey" (click)="onVoltar()">Voltar</button>
+      </form>
+  </div>
+
+  <!-- Resultado transferencia -->
+  <div id="formSucess" *ngIf="resultTransferencia" class="container-msg-transferencia">
+    <div *ngIf="resultTransferencia == true" class="sucesso-transferencia">
+      <p>Transferência realizada<br>com sucesso!</p><i class="far fa-thumbs-up"></i>
+    </div>
+    <div *ngIf="resultTransferencia == false" class="erro-transferencia">
+        <p>Ops, algo deu errado.<br>Transferência não realizada.</p><i class="far fa-meh"></i>
+      </div>
+  </div>
+</div>

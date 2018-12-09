@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container container-link-home">
+  <div class="row">
+    <div class="col-7 col-sm-7 col-md-6 col-lg-12 col-xl-12">
+        <a [routerLink]="['/homePage']" class="link-home"><i class="fas fa-angle-left"></i>Voltar para home</a>
+      </div>
+      <div class="d-block d-sm-block d-md-none col-5 col-sm-5 col-md-6 col-lg-12 col-xl-12">
+          <p class="saldo-mobile-text d-sm-block d-md-none">Saldo</p>
+          <app-exibir-saldo></app-exibir-saldo>
+      </div>
+    </div>
+  </div>
+  
+<div class="container">
+  <div class="row">
+    <div class="d-none d-sm-none d-md-nome d-lg-block col-lg-4 col-xl-4">
+        <app-saldo></app-saldo>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <app-transferencia-form></app-transferencia-form>
+    </div>
+  </div>
+</div>
