@@ -9,28 +9,28 @@
         </div>
         <h1 class="frase">Peça a portabilidade e venha ser YourBank hoje mesmo!</h1>
       </div>
-
+      <!-- mask="000.000.000-00" -->
       
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 box-card-2">
-          <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+          <!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit()"> -->
 
             <div class="form-group col-12 col-sm-12 col-md-12">
               <h2 class="text-login">Faça seu login</h2>
-              <input mask="000.000.000-00" type="text" class="input-style form-control color-input" id="input-cpf" placeholder="CPF">
+              <input  [(ngModel)]="loginUserData.cpf"   type="text" class="input-style form-control color-input" id="input-cpf" placeholder="CPF">
             </div>
             
             <div class="form-group col-12 col-sm-12 col-md-12">
-              <input type="password" class="form-control input-style" placeholder="Password" formControlName="cpf">
+              <input [(ngModel)]="loginUserData.senha"  type="password" class="form-control input-style" placeholder="Password"  >
             </div>
             
             <div class="form-group row">
               <div class="col-12 col-12 col-sm-12 col-md-12">
-                <button type="submit" class="btn-acesso">Acessar</button>
+                <button type="submit" class="btn-acesso" (click)="loginUser()" >Acessar</button>
               </div>
             </div>
 
           <!-- <app-form-debugger [form]="formulario"></app-form-debugger> -->
-        </form>
+        <!-- </form> -->
       </div>
 
       

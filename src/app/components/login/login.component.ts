@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ClienteService } from '../../services/cliente.service';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { AuthGuardService } from 'src/app/guards/auth-guard.service';
+// import { FormGroup } from '@angular/forms';
+
+// import { ToastrService } from 'ngx-toastr';
+// import { AuthGuardService } from 'src/app/guards/auth-guard.service';
+// import { ClienteService } from '../../services/cliente.service';
 
 
 // import { Typed } from 'typed.js';
@@ -16,67 +19,30 @@ import { AuthGuardService } from 'src/app/guards/auth-guard.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginUserData = {}
 
-  formulario: FormGroup;
+  // imgBackgrond: string = 'assets/img/background-login.png';
+  // fotoCaminho: string = 'assets/img/yourbank.png';
 
-  dados: any = {
-    cpf: '',
-    password: ''
+  constructor(private _auth: ClienteService,
+    private _router: Router){ }
 
-  }
-
-  imgBackgrond: string = 'assets/img/background-login.png';
-  fotoCaminho: string = 'assets/img/yourbank.png';
-
-  constructor(
-    private formBuilder: FormBuilder,
-    // private clienteService: ClienteService,
-    private toastrService: ToastrService,
-    private router: Router,
-    private authGuardService: AuthGuardService
-   ) { }
-
-  ngOnInit() {
-    this.formulario = this.formBuilder.group({
-      cpf: [null, Validators.compose([
-        Validators.maxLength(11),
-        Validators.required
-      ]) ],
-      password: [null, Validators.compose([
-        Validators.minLength(4),
-        Validators.maxLength(6),
-        Validators.required
-      ])]
-    });
-    
+  ngOnInit() {  
   }  
-  onSubmit() {
-    console.log(this.formulario)
-    //verificar se o  esta valido
-    if(this.formulario.valid){ //atribuindo os dados
-      this.dados.cpf = this.formulario.value.cpf
-      this.dados.password = this.formulario.value.password
-      //chamando minha service e chamando o metodo login passando os dados
-      // this.clienteService.login(this.dados)
-        .then(res => {
-          console.log(res) //imprimindo resultado no console
 
-          //colocando meu token de retorno da api localStorage
-          // localStorage.setItem('token', JSON.stringfy(res))
-          
-          this.authGuardService.login();
-          //chamando meu toastr pra mostrar uma mensagem
-          // this.toastrService.sucess('Login feito com sucesso!')
-         
-          //jogando o user pra pagia de homePage
-          this.router.navigate(['/homePage'])
-        })
-        .catch(err => {
-          //mostro que algo deu errado para o usuario
-          this.toastrService.error('Dados inválidos')
-        })
-    } else {
-
-    }
+  loginUser () {
+    this._auth.loginUser(this.loginUserData)
+    .subscribe(
+      res =>{
+        console.log('res' , res.cpf)
+        
+        sessionStorage.setItem('cpf', res.cpf)
+        this._router.navigate(['/homePage'])
+      },
+       err => console.log(err)
+     
+    ) 
+    console.log('user1', this.loginUserData)
   }
+
 }

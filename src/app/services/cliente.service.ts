@@ -7,6 +7,7 @@ import { Cliente } from '../models/cliente';
 })
 export class ClienteService {
   url: String = 'http://localhost:3000/clientes/';
+  private _loginUrl = 'http://localhost:3000/api/auth/login';
   constructor(private http: HttpClient) {}
 
     getCliente(cpf: Number) {
@@ -18,4 +19,7 @@ export class ClienteService {
     postTransf(cliente: Cliente){
       return this.http.put(this.url + `cliente/${cliente.cpf}`, cliente).toPromise();
     }
+    loginUser(user) {
+      return this.http.post<any>(this._loginUrl, user)
+   }
 }
