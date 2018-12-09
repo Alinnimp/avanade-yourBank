@@ -1,6 +1,7 @@
-h1{
-    font-size: 47px;
+.titulo-saldo {
+    font-size: 24px;
     font-weight: 400;
+    color: #424248;
 }
 
 .extrato-btn {
