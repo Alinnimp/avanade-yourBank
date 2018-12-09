@@ -73,6 +73,14 @@ a:hover.btn-grey-text {
   text-decoration: none;
 }
 
+.ng-invalid.ng-touched:not(form){
+  border-bottom: 1px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+
 @media (max-width: 768px)  { 
   .box-card {
     margin-bottom: 20px;

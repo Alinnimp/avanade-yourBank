@@ -16,11 +16,11 @@
 
             <div class="form-group col-12 col-sm-12 col-md-12">
               <h2 class="text-login">Faça seu login</h2>
-              <input  [(ngModel)]="loginUserData.cpf"   type="text" class="input-style form-control color-input" id="input-cpf" placeholder="CPF">
+              <input minlength="11" maxlength="14" mask="000.000.000-00" [(ngModel)]="loginUserData.cpf"   type="text" class="input-style form-control color-input" id="input-cpf" placeholder="CPF">
             </div>
             
             <div class="form-group col-12 col-sm-12 col-md-12">
-              <input [(ngModel)]="loginUserData.senha"  type="password" class="form-control input-style" placeholder="Password"  >
+              <input minlength="6" maxlength="6" [(ngModel)]="loginUserData.senha"  type="password" class="form-control input-style" placeholder="Senha"  >
             </div>
             
             <div class="form-group row">

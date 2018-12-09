@@ -54,10 +54,10 @@ import { TipoTransfPipe } from './pipes/tipo-transf.pipe';
     NgxMaskModule.forRoot(),
     RouterModule.forRoot ([
       {path: 'login',  component: LoginComponent },
-      // {path: 'homePage', canActivate: [AuthGuardService], component: HomePageComponent },
-      {path: 'homePage', component: HomePageComponent },
-      // {path: 'transferencia', canActivate: [AuthGuardService],  component: TransferenciaPageComponent },
-      {path: 'transferencia', component: TransferenciaPageComponent },
+      {path: 'homePage', canActivate: [AuthGuardService], component: HomePageComponent },
+      // {path: 'homePage', component: HomePageComponent },
+      {path: 'transferencia', canActivate: [AuthGuardService],  component: TransferenciaPageComponent },
+      // {path: 'transferencia', component: TransferenciaPageComponent },
       {path: '', redirectTo: 'login', pathMatch: 'full' }
 
     ])

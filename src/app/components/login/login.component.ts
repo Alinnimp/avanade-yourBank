@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../../services/cliente.service';
 import { Router } from '@angular/router';
-// import { FormGroup } from '@angular/forms';
-
-// import { ToastrService } from 'ngx-toastr';
-// import { AuthGuardService } from 'src/app/guards/auth-guard.service';
-// import { ClienteService } from '../../services/cliente.service';
+import { ToastrService } from 'ngx-toastr';
+import { AuthGuardService } from 'src/app/guards/auth-guard.service';
 
 
 // import { Typed } from 'typed.js';
@@ -21,28 +18,36 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginUserData = {}
 
-  // imgBackgrond: string = 'assets/img/background-login.png';
-  // fotoCaminho: string = 'assets/img/yourbank.png';
+  imgBackgrond: string = 'assets/img/background-login.png';
+  fotoCaminho: string = 'assets/img/yourbank.png';
 
-  constructor(private _auth: ClienteService,
-    private _router: Router){ }
+  constructor(private auth: ClienteService,
+    private router: Router,
+    private  authGuardService : AuthGuardService,
+    private toastrService: ToastrService){ }
 
   ngOnInit() {  
   }  
 
   loginUser () {
-    this._auth.loginUser(this.loginUserData)
+    this.auth.loginUser(this.loginUserData)
     .subscribe(
       res =>{
-        console.log('res' , res.cpf)
-        
-        sessionStorage.setItem('cpf', res.cpf)
-        this._router.navigate(['/homePage'])
+        console.log('res' , res.token)
+        console.log('res' , res.cliente)
+        console.log('res' , res.cliente.cpf)
+
+        sessionStorage.setItem('cpf', res.cliente.cpf)
+        this.toastrService.success('Login feito com sucesso!')
+        this.authGuardService.login();
+        this.router.navigate(['/homePage'])
       },
-       err => console.log(err)
+       err => {console.log(err)
+       this.toastrService.error('Falha ao realizar login, tente novamente')
+       }
      
     ) 
-    console.log('user1', this.loginUserData)
+    console.log('requisicao voltou')
   }
 
 }

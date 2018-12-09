@@ -14,7 +14,9 @@ cliente = new Cliente;
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
-    this.clienteService.getCliente(67593591000) //aqui estou passando um cpf de cliente
+    let cpf = sessionStorage.getItem('cpf')
+    let cpfSessionStorage = parseInt(cpf)
+    this.clienteService.getCliente(cpfSessionStorage) //aqui estou passando um cpf de cliente
     .then(dados => {
       this.cliente = dados;
     })
