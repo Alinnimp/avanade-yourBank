@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/app/models/cliente'
 import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
@@ -9,17 +8,18 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ExtratoComponent implements OnInit {
 
+  clienteLogadoCpf = parseInt(sessionStorage.getItem('cpf'));
   transferencias = [];
 
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
-    this.clienteService.getCliente(67593591000) //aqui estou passando um cpf de cliente
+    this.clienteService.getCliente(this.clienteLogadoCpf)
     .then(dados => {
       for(let i = 0; i < dados.transferencia.length; i++){
         this.transferencias.push(dados.transferencia[i]);
       }
-      console.log(this.transferencias);
+      this.transferencias.reverse();
     })
     .catch(erro => {
       console.log(erro)

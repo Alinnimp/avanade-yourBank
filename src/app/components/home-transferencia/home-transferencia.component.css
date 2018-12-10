@@ -7,10 +7,12 @@
 .text-size {
     font-size: 24px;
     font-weight: 400;
+    color: #424248;
   }
 
 .text-tranfs {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 

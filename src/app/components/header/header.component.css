@@ -9,11 +9,11 @@
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 400;
 }
 h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -36,4 +36,21 @@ h3 {
 
 .img-logo{
     width: 200px;
+}
+
+.borda {
+    border: 1px solid red;
+}
+
+.align-user{
+    text-align: left;
+    font-size: 16px;
+}
+
+.h3-mobile{
+    font-size: 14px;
+}
+
+.exit-mobile{
+    font-size: 11px;
 }

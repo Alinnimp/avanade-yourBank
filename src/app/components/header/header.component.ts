@@ -10,13 +10,15 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class HeaderComponent implements OnInit {
 
-  fotoCaminho: string = 'assets/img/yourbank.png'
+  fotoCaminho: string = 'assets/img/yourbank.png';
+  clienteLogadoCpf = parseInt(sessionStorage.getItem('cpf'));
   cliente = new Cliente;
   
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
-    this.clienteService.getCliente(67593591000) //aqui estou passando um cpf de cliente
+
+    this.clienteService.getCliente(this.clienteLogadoCpf)
     .then(dados => {
       this.cliente = dados;
     })

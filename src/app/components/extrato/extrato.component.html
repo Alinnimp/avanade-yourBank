@@ -1,23 +1,27 @@
-<div class="mt-4 d-flex flex-column align-items-start">
+<div class="mt-4 d-flex flex-column align-items-start box-extrato" >
   <div>
-    <h1 class="mb-2">Extrato</h1>
+    <!-- <h1 class="mb-2">Extrato</h1> -->
   </div>
   <div class="d-flex flex-column col-12">
     <!-- item do extrato -->
-    <div class="d-flex borda mb-2 pb-2">
-      <!-- icon -->
-
+    <div class="mb-2 pb-2">
       <!-- informações -->
       <div>
-        <div class="d-flex flex-column align-items-start">
-          <div class="mt-2 d-flex flex-column align-items-start" *ngFor="let transferencia of transferencias">
+        <div class="align-items-start">
+          <div class="row borda  mt-2 align-items-start text-left" *ngFor="let transferencia of transferencias">
+            <div class="col-6 no-gutters ">
             <span class="text-fluxo">      
               <!-- icon -->
               <i class="fas fa-arrow-circle-right" *ngIf="transferencia.tipo == true"></i>
               <i class="fas fa-arrow-circle-left" *ngIf="transferencia.tipo == false"></i>
               {{ transferencia.tipo | tipoTransf: transferencia.tipo }}</span>
-            <span class="text-data">{{ transferencia.data | date:'dd/MM/yyyy' }}</span>
+              <br>
             <span class="text-valor">{{ transferencia.valor | currency:'BRL':true:'1.2-2' }}</span>
+            <br>  
+          </div>
+            <div class="col-6 no-gutters  text-right">
+                <span class="text-data mr-auto">{{ transferencia.data | date:'dd/MM/yyyy' }}</span>
+            </div>
           </div>
         </div>
       </div>

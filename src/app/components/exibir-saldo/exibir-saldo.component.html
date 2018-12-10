@@ -1,1 +1,1 @@
-<p class="text-right">R${{ cliente.saldo }}</p>
+<p class="text-right">{{ cliente.saldo | currency:'BRL':true:'1.2-2' }}</p>
