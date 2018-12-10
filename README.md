@@ -36,6 +36,3 @@ Protótipo: https://xd.adobe.com/view/31020f8f-9b84-4863-454e-ab43a6d976a0-4733/
 - José Henrique: criação de banco de dados, api de extrato/transação e Requisição de api no angular.
 - Rosines Almeida: criação de banco de dados e api de autentitificação.
 
-### imagens do YourBank
-
-(Aguardando a finalização do projeto)
